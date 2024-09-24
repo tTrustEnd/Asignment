@@ -5,7 +5,6 @@ using AsignmentWinUI.Core;
 using AsignmentWinUI.Core.Contracts.Services;
 using AsignmentWinUI.Core.Infrastructure.SpLite.DataContext;
 using AsignmentWinUI.Core.Infrastructure.SpLite.Repositories;
-using AsignmentWinUI.Core.Services;
 using AsignmentWinUI.Core.UseCases._Repositories;
 using AsignmentWinUI.Core.UseCases.GetMessageUseCase;
 using AsignmentWinUI.Core.UseCases.GetOnlineGroupMemberUseCase;
@@ -16,7 +15,6 @@ using AsignmentWinUI.Helpers;
 using AsignmentWinUI.Services;
 using AsignmentWinUI.ViewModels;
 using AsignmentWinUI.Views;
-using CleanArchitectureSignalR.Presentation.Hubs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -63,17 +61,16 @@ public partial class App : Application
         {
             // Default Activation Handler
             services.AddTransient<ActivationHandler<LaunchActivatedEventArgs>, DefaultActivationHandler>();
-            services.AddSingleton<ChatHub>();
-
             // Other Activation Handlers
 
             // Services
             services.AddSingleton<IActivationService, ActivationService>();
             services.AddSingleton<IPageService, PageService>();
+
             services.AddSingleton<INavigationService, NavigationService>();
+            services.AddTransient<ISignalRService, SignalRService>();
 
             // Core Services
-            services.AddSingleton<IFileService, FileService>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlite("Data Source=app.db"));
             services.AddTransient<ISendMessageUseCase, SendMessageUseCase>();
@@ -89,6 +86,8 @@ public partial class App : Application
             // Views and ViewModels
             services.AddTransient<MainViewModel>();
             services.AddTransient<MainPage>();
+            services.AddTransient<ChatViewModel>();
+            services.AddTransient<ChatPage>();
 
             // Configuration
         }).
@@ -106,25 +105,7 @@ public partial class App : Application
     protected async override void OnLaunched(LaunchActivatedEventArgs args)
     {
         base.OnLaunched(args);
-        //try
-        //{
-        //    await Host.StartAsync();
-        //    Debug.WriteLine("Host started successfully.");
-        //}
-        //catch (Exception ex)
-        //{
-        //    Debug.WriteLine($"Error starting host: {ex.Message}");
-        //}
         var dbContext = GetRequiredService<AppDbContext>();
-        bool databaseCreated = await dbContext.Database.EnsureCreatedAsync();
-            if (databaseCreated)
-            {
-                Debug.WriteLine("Database was created.");
-            }
-            else
-            {
-                Debug.WriteLine("Database already exists.");
-            }
         await App.GetService<IActivationService>().ActivateAsync(args);
     }
 

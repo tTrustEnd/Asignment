@@ -1,0 +1,41 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="AsignmentWinUI.Views.ChatPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentWinUI.Views"
+    xmlns:vm="using:AsignmentWinUI.ViewModels"
+    >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Danh sách người dùng online -->
+        <StackPanel Grid.Column="0" Background="LightGray">
+            <TextBlock Text="Online Users" FontSize="24" FontWeight="Bold" Margin="10"/>
+            <ItemsControl x:ConnectionId='6' x:Name="OnlineUsersList" Margin="10">
+                <!-- Binding sẽ được thêm sau -->
+            </ItemsControl>
+        </StackPanel>
+
+        <!-- Khung chat -->
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Chat" FontSize="24" FontWeight="Bold" Margin="10"/>
+            <ScrollViewer x:ConnectionId='2' x:Name="ChatScrollViewer" VerticalScrollBarVisibility="Auto" Margin="10">
+                <StackPanel x:ConnectionId='5' x:Name="ChatMessagesList">
+                    <!-- Các tin nhắn sẽ được thêm sau -->
+                </StackPanel>
+            </ScrollViewer>
+
+            <TextBox x:ConnectionId='3' x:Name="MessageInput" 
+                                                                          
+                     PlaceholderText="Type your message..." Margin="10"/>
+            <Button x:ConnectionId='4' Content="Send" 
+                                                                         
+                    Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 using AsignmentWinUI.Contracts.Services;
 using AsignmentWinUI.Contracts.ViewModels;
@@ -107,6 +108,7 @@ public class NavigationService : INavigationService
 
     private void OnNavigated(object sender, NavigationEventArgs e)
     {
+        Debug.WriteLine($"Navigated to: {e.SourcePageType.Name}");
         if (sender is Frame frame)
         {
             var clearNavigation = (bool)frame.Tag;

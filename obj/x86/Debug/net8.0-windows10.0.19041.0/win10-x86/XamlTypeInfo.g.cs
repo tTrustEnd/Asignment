@@ -224,7 +224,7 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[32];
+            _typeNameTable = new string[30];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -247,18 +247,16 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
             _typeNameTable[19] = "AsignmentWinUI.MainWindow";
             _typeNameTable[20] = "Microsoft.UI.Xaml.Thickness";
             _typeNameTable[21] = "Microsoft.UI.Xaml.CornerRadius";
-            _typeNameTable[22] = "AsignmentWinUI.Views.MainPage";
+            _typeNameTable[22] = "AsignmentWinUI.Views.ChatPage";
             _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[25] = "AsignmentWinUI.ViewModels.MainViewModel";
-            _typeNameTable[26] = "CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient";
-            _typeNameTable[27] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
-            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[29] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[30] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[31] = "Int32";
+            _typeNameTable[25] = "AsignmentWinUI.Views.MainPage";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[28] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[29] = "Int32";
 
-            _typeTable = new global::System.Type[32];
+            _typeTable = new global::System.Type[30];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -283,16 +281,14 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
             _typeTable[19] = typeof(global::AsignmentWinUI.MainWindow);
             _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Thickness);
             _typeTable[21] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
-            _typeTable[22] = typeof(global::AsignmentWinUI.Views.MainPage);
+            _typeTable[22] = typeof(global::AsignmentWinUI.Views.ChatPage);
             _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[25] = typeof(global::AsignmentWinUI.ViewModels.MainViewModel);
-            _typeTable[26] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient);
-            _typeTable[27] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
-            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[30] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[31] = typeof(global::System.Int32);
+            _typeTable[25] = typeof(global::AsignmentWinUI.Views.MainPage);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[28] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[29] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -331,9 +327,9 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
         private object Activate_4_WindowEx() { return new global::WinUIEx.WindowEx(); }
         private object Activate_16_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
         private object Activate_19_MainWindow() { return new global::AsignmentWinUI.MainWindow(); }
-        private object Activate_22_MainPage() { return new global::AsignmentWinUI.Views.MainPage(); }
-        private object Activate_25_MainViewModel() { return new global::AsignmentWinUI.ViewModels.MainViewModel(); }
-        private object Activate_28_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_22_ChatPage() { return new global::AsignmentWinUI.Views.ChatPage(); }
+        private object Activate_25_MainPage() { return new global::AsignmentWinUI.Views.MainPage(); }
+        private object Activate_26_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -341,7 +337,7 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_30_IList(object instance, object item)
+        private void VectorAdd_28_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -514,10 +510,9 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  AsignmentWinUI.Views.MainPage
+            case 22:   //  AsignmentWinUI.Views.ChatPage
                 userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_MainPage;
-                userType.AddMemberName("ViewModel");
+                userType.Activator = Activate_22_ChatPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -530,26 +525,16 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
                 xamlType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  AsignmentWinUI.ViewModels.MainViewModel
-                userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
-                userType.SetIsReturnTypeStub();
+            case 25:   //  AsignmentWinUI.Views.MainPage
+                userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_25_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient
-                userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
-                xamlType = userType;
-                break;
-
-            case 27:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
-                userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                xamlType = userType;
-                break;
-
-            case 28:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 26:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_28_TreeViewNode;
+                userType.Activator = Activate_26_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -561,18 +546,18 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 29:   //  Microsoft.UI.Xaml.DependencyObject
+            case 27:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 28:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_30_IList;
+                userType.CollectionAdd = VectorAdd_28_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 31:   //  Int32
+            case 29:   //  Int32
                 xamlType = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -936,57 +921,52 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.CornerRadius)instance;
             that.BottomLeft = (global::System.Double)Value;
         }
-        private object get_31_MainPage_ViewModel(object instance)
-        {
-            var that = (global::AsignmentWinUI.Views.MainPage)instance;
-            return that.ViewModel;
-        }
-        private object get_32_TreeViewNode_Children(object instance)
+        private object get_31_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_33_TreeViewNode_Content(object instance)
+        private object get_32_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_33_TreeViewNode_Content(object instance, object Value)
+        private void set_32_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_34_TreeViewNode_Depth(object instance)
+        private object get_33_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_35_TreeViewNode_HasChildren(object instance)
+        private object get_34_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_36_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_35_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_36_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_35_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_37_TreeViewNode_IsExpanded(object instance)
+        private object get_36_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_37_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_36_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_38_TreeViewNode_Parent(object instance)
+        private object get_37_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -1187,56 +1167,50 @@ namespace AsignmentWinUI.AsignmentWinUI_XamlTypeInfo
                 xamlMember.Getter = get_30_CornerRadius_BottomLeft;
                 xamlMember.Setter = set_30_CornerRadius_BottomLeft;
                 break;
-            case "AsignmentWinUI.Views.MainPage.ViewModel":
-                userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsignmentWinUI.Views.MainPage");
-                xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "ViewModel", "AsignmentWinUI.ViewModels.MainViewModel");
-                xamlMember.Getter = get_31_MainPage_ViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_32_TreeViewNode_Children;
+                xamlMember.Getter = get_31_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_TreeViewNode_Content;
-                xamlMember.Setter = set_33_TreeViewNode_Content;
+                xamlMember.Getter = get_32_TreeViewNode_Content;
+                xamlMember.Setter = set_32_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_TreeViewNode_Depth;
+                xamlMember.Getter = get_33_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_34_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_36_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_36_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_35_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_35_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_37_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_36_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_36_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsignmentWinUI.AsignmentWinUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_38_TreeViewNode_Parent;
+                xamlMember.Getter = get_37_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

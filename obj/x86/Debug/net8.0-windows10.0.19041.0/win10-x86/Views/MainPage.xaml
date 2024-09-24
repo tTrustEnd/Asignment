@@ -22,7 +22,7 @@
 
         <Grid Grid.Row="1">
             <Button x:ConnectionId='3' Grid.Row="1" Content="Join" Width="180"
-                                                                   
+                                                                    
                     />
         </Grid>
         
