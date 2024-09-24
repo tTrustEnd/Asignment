@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsignmentWinUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e503465c00785d3d25861d518a7c533f6c3f03a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+702ef2ba94ce56a40a0b599ae0b1fc90a0b00c64")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsignmentWinUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsignmentWinUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
